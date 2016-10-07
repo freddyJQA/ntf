@@ -11,12 +11,12 @@
 	margin: 0 auto;
 	border: none;
 }
-#ntf.top {
+#ntf[data-position='top'] {
 	top: 0;
 	border-bottom-left-radius: 6px;
 	border-bottom-right-radius: 6px;
 }
-#ntf.bottom {
+#ntf[data-position='bottom'] {
 	bottom: 0;
 	border-top-left-radius: 6px;
 	border-top-right-radius: 6px;
@@ -24,11 +24,11 @@
 #ntf.responsive {
 	width: 100%;
 }
-#ntf.responsive.top {
+#ntf.responsive[data-position='top'] {
 	border-bottom-right-radius: 0;
 	border-bottom-left-radius: 0;
 }
-#ntf.responsive.bottom {
+#ntf.responsive[data-position='bottom'] {
 	border-top-right-radius: 0;
 	border-top-left-radius: 0;
 }
@@ -36,11 +36,11 @@
 	#ntf.responsive {
 		width: 40%;
 	}
-	#ntf.responsive.top {
+	#ntf.responsive[data-position='top'] {
 		border-bottom-right-radius: 6px;
 		border-bottom-left-radius: 6px;
 	}
-	#ntf.responsive.bottom {
+	#ntf.responsive[data-position='bottom'] {
 		border-top-right-radius: 6px;
 		border-top-left-radius: 6px;
 	}
@@ -50,10 +50,10 @@
 	padding-left: 15px;
 	padding-right: 15px;
 }
-#ntf.top .ntf-text {
+#ntf[data-position='top'] .ntf-text {
 	padding-top: 15px;
 }
-#ntf.bottom .ntf-text {
+#ntf[data-position='bottom'] .ntf-text {
 	padding-bottom: 15px;
 }
 #ntf .ntf-close {
@@ -81,13 +81,13 @@
 			-o-transition-duration: .3s;
 				transition-duration: .3s;
 }
-#ntf.top .ntf-close > button > span {
+#ntf[data-position='top'] .ntf-close > button > span {
 	-webkit-transform:  rotate(-90deg);
 		-moz-transform:  rotate(-90deg);
 			-o-transform: rotate(-90deg);
 				transform: rotate(-90deg);
 }
-#ntf.bottom .ntf-close > button > span {
+#ntf[data-position='bottom'] .ntf-close > button > span {
 	-webkit-transform:  rotate(90deg);
 		-moz-transform:  rotate(90deg);
 			-o-transform: rotate(90deg);

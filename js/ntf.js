@@ -15,16 +15,17 @@
 
 		var settings = $.extend(settings_default, settings);
 
-		var ntf_position = (settings['position'] == 'top') ? 'top' : 'bottom';
-		var ntf_responsive = (settings['responsive'] == true) ? ' responsive' : '';
-		var ntf_animation_init = (settings['position'] == 'bottom') ? ' slideUp' : ' slideDown';
+		var ntf_position = (settings['position'] != 'top') ? 'bottom' : 'top';
+		var ntf_responsive = (settings['responsive'] == true) ? 'responsive ' : '';
+		var ntf_animation_init = (ntf_position == 'bottom') ? 'slideUp' : 'slideDown';
 
 		// Creo el div que será el contenedor principal de la notificación.
 		var ntf_object = $('<div/>', {
 			id: 'ntf',
-			class: ntf_position + ntf_responsive + ntf_animation_init,
+			class: ntf_responsive + ntf_animation_init,
 			width: (settings['responsive']) ? '' : settings['width'],
-			'data-color': settings['color']
+			'data-color': settings['color'],
+			'data-position': ntf_position
 		});
 
 		// Creo el div que contendrá el texto de la notificación. 
@@ -74,14 +75,13 @@
 		// Adicionalmente, se llama a la función 'init_time_out()' para que inicialize
 		// la cuenta regresiva de cierre a la nueva notificación que se está añadiendo.
 		function open() {
-			var aux_ntf_object = $(ntf_object);
-			$(aux_ntf_object).prependTo('body');			
-			init_time_out(aux_ntf_object);
+			$(ntf_object).prependTo('body');			
+			init_time_out(ntf_object);
 		}
 
 		// Cierra la notificación.
 		function close(ntf_element) {
-			if (settings['position'] == 'bottom') {
+			if ($(ntf_element).data('position') == 'bottom') {
 				$(ntf_element).animate({
 					marginBottom: '-100%'
 				}, 800, function() {
