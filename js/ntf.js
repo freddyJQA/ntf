@@ -15,13 +15,14 @@
 
 		var settings = $.extend(settings_default, settings);
 
-		var ntf_position = (settings['position'] == 'top') ? ' top' : ' bottom';
+		var ntf_position = (settings['position'] == 'top') ? 'top' : 'bottom';
 		var ntf_responsive = (settings['responsive'] == true) ? ' responsive' : '';
+		var ntf_animation_init = (settings['position'] == 'bottom') ? ' slideUp' : ' slideDown';
 
 		// Creo el div que será el contenedor principal de la notificación.
 		var ntf_object = $('<div/>', {
 			id: 'ntf',
-			class: ntf_position + ntf_responsive,
+			class: ntf_position + ntf_responsive + ntf_animation_init,
 			width: (settings['responsive']) ? '' : settings['width'],
 			'data-color': settings['color']
 		});
@@ -53,7 +54,8 @@
 		// Si es bottom, adjunto al div de la notificación el contenedor de cierre y luego el texto. 
 		// De lo contrario, es decir, si está en top, adjunto primero el contenedor de texto
 		// y luego el contenedor de cierre.
-		(settings['position'] == 'bottom') ? $(ntf_object).append(ntf_close, ntf_text)
+		(settings['position'] == 'bottom')
+			? $(ntf_object).append(ntf_close, ntf_text)
 			: $(ntf_object).append(ntf_text, ntf_close);
 
 
@@ -73,12 +75,7 @@
 		// la cuenta regresiva de cierre a la nueva notificación que se está añadiendo.
 		function open() {
 			var aux_ntf_object = $(ntf_object);
-
-			if (settings['position'] == 'bottom')
-				$(aux_ntf_object).prependTo('body').addClass('slideUp');
-			else
-				$(aux_ntf_object).prependTo('body').addClass('slideDown');
-			
+			$(aux_ntf_object).prependTo('body');			
 			init_time_out(aux_ntf_object);
 		}
 
