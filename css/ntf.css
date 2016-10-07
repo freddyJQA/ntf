@@ -142,6 +142,6 @@
 }
 .slideDown,
 .slideUp {
-	-webkit-animation-duration: .35s;
-		animation-duration: .35s;
+	-webkit-animation-duration: .450s;
+		animation-duration: .450s;
 }
