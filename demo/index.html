@@ -16,17 +16,219 @@
 	<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
 	<script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
 
-	<style type="text/css">
-		html,
-		body {
-			width: 100%;
-			height: 100%;
-			margin: 0;
-		}
-	</style>
+	<!-- Demo -->
+	<link rel="stylesheet" type="text/css" href="css/demo.css">
 
+	<!-- font -->
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet">
 </head>
 <body>
+	<div class="container">
+		<div class="page-header">
+  			<h1>ntf<small>::notificaciones para tus proyectos web</small></h1>
+		</div> <!-- .page-header -->
+		<div class="jumbotron">
+			<div class="descripcion">
+				<span>Complementa tus proyectos web con ntf, un plugin jquery para mostrar
+					notificaciones con un diseño atractivo, ligero y sencillo.</span>
+			</div>
+	  		<a href="https://github.com/freddyJQA/ntf" target="_blank" class="btn btn-success btn-lg">
+	  			Descargar en Github
+	  		</a>
+		</div> <!-- .jumbotron -->
+		<section class="demo-ntf">
+			<blockquote class="title">
+				<p>EJEMPLOS</p>
+			</blockquote>
+			<div class="body">
+				<div class="container-fluid">
+					<div class="row">
+						<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+							<div class="ver">
+								<input type="button" name="color" value="Color azul" data-color="blue"
+									class="btn btn-default">
+							</div>
+							<figure>
+								<pre>$.ntf({text:'Esto es una notificación de <strong>color azul</strong>.', color:'blue'});</pre>
+							</figure>
+						</div>
+						<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+							<div class="ver">
+								<input type="button" name="color" value="Color rojo" data-color="red"
+									class="btn btn-default">
+							</div>
+							<figure>
+								<pre>$.ntf({text:'Esto es una notificación de <strong>color rojo</strong>.', color:'red'});</pre>
+							</figure>
+						</div>
+						<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+							<div class="ver">
+								<input type="button" name="color" value="Color verde" data-color="green"
+									class="btn btn-default">
+							</div>
+							<figure>
+								<pre>$.ntf({text:'Esto es una notificación de <strong>color verde</strong>.', color:'green'});</pre>
+							</figure>
+						</div>
+					</div> <!-- /.row -->
+					<div class="row">
+						<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+							<div class="ver">
+								<p>Puedes cambiarle la posición</p>
+								<input type="button" name="bottom" value="Bottom" class="btn btn-default">
+							</div>
+							<figure>
+								<pre>$.ntf({text:'Esta notificación está en la parte de abajo de tu pantalla.', position:'bottom', color:'red'});</pre>
+							</figure>
+						</div>
+						<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+							<div class="ver">
+								<p>Puedes hacer que no sea responsive</p>
+								<input type="button" name="no-responsive" value="No responsive"
+									class="btn btn-default">
+							</div>
+							<figure>
+								<pre>$.ntf({text:'Esta notificación <strong>NO</strong> se adaptará al tamaño de la pantalla.', responsive: false, color: 'green', width: 400});</pre>
+							</figure>
+						</div>
+						<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+							<div class="ver">
+								<p>Puedes hacer que no se cierre automáticamente</p>
+								<input type="button" name="permanente" value="Permanente"
+									class="btn btn-default">
+							</div>
+							<figure>
+								<pre>$.ntf({text:'Esta notificación <strong>NO</strong> se ocultará de forma automática.', permanent:true, color:'blue'});</pre>
+							</figure>
+						</div>
+					</div> <!-- /.row -->
+				</div>
+			</div>
+		</section>
+		<section class="demo-ntf">
+			<blockquote class="title">
+				<p>PARÁMETROS</p>
+			</blockquote>
+			<div class="body">
+				<div class="container-fluid">
+					<div class="row">
+						<table class="table">
+  							<thead>
+  								<tr>
+  									<th>Parámetro</th>
+  									<th>Valor por defecto</th>
+  									<th>Tipo de dato</th>
+  								</tr>
+  							</thead>
+  							<tbody>
+  								<tr>
+  									<td><span class="label label-default">color</span></td>
+  									<td><span class="label label-ntf-demo">blue</span></td>
+  									<td>string</td>
+  								</tr>
+  								<tr>
+  									<td><span class="label label-default">duration</span></td>
+  									<td><span class="label label-ntf-demo">5</span></td>
+  									<td>int (segundos)</td>
+  								</tr>
+  								<tr>
+  									<td><span class="label label-default">permanent</td>
+  									<td><span class="label label-ntf-demo">false</span></td>
+  									<td>bool</td>
+  								</tr>
+  								<tr>
+  									<td><span class="label label-default">position</span></td>
+  									<td><span class="label label-ntf-demo">top</span></td>
+  									<td>string</td>
+  								</tr>
+  								<tr>
+  									<td><span class="label label-default">responsive</td>
+  									<td><span class="label label-ntf-demo">true</span></td>
+  									<td>bool</td>
+  								</tr>
+  								<tr>
+  									<td><span class="label label-default">text</td>
+  									<td><span class="label label-ntf-demo">' '</span></td>
+  									<td>string</td>
+  								</tr>
+  								<tr>
+  									<td><span class="label label-default">width</td>
+  									<td><span class="label label-ntf-demo">600</span></td>
+  									<td>int (sólo para notificaciones no responsive)</td>
+  								</tr>
+  							</tbody>
+						</table>
+					</div> <!-- /.row -->
+				</div>
+			</div>
+		</section>
+		<section class="demo-ntf">
+			<blockquote class="title">
+				<p>DEPENDENCIAS</p>
+			</blockquote>
+			<div class="body">
+				<p> - Requiere de la librería javascript <a href="https://jquery.com/" target="_blank">jQuery</a>.</p>
+			</div>
+		</section>
+		<footer>
+			<a href="https://github.com/freddyJQA/ntf" target="_blank">ntf -- Github</a>
+		</footer>
+	</div> <!-- .container -->
+
+	<script type="text/javascript">
+
+		// bienvenida.
+		$(function() {
+			$.ntf({
+				text: '<strong>¡BIENVENIDO!</strong>' +
+					' Esto es sólo un ejemplo de como funciona el plugin ntf.',
+				color: 'green'
+			});
+		});
+
+		// ejemplo (colores)
+		$(function() {
+			$('input[name="color"]').on('click', function() {
+				color = $(this).data('color');
+				value = $(this).attr('value');
+				$.ntf({
+					text: 'Esto es una notificación de <strong>' + value.toLowerCase() + '</strong>.',
+					color: color
+				});
+			});
+		});
+
+		// ejemplo (bottom)
+		$(function() {
+			$('input[name="bottom"]').on('click', function() {
+				$.ntf({
+					text: 'Esta notificación está en la parte de abajo de tu pantalla.',
+					position: 'bottom', color: 'red'
+				});
+			});
+		});
+
+		// ejemplo (no responsive)
+		$(function() {
+			$('input[name="no-responsive"]').on('click', function() {
+				$.ntf({
+					text: 'Esta notificación <strong>NO</strong> se adaptará al tamaño de la pantalla.',
+					responsive: false, color: 'green', width: 400
+				});
+			});
+		});
+
+		// ejemplo (permanente)
+		$(function() {
+			$('input[name="permanente"]').on('click', function() {
+				$.ntf({
+					text: 'Esta notificación <strong>NO</strong> se ocultará de forma automática.',
+					permanent: true, color: 'blue'
+				});
+			});
+		});
+
+	</script>
 
 </body>
 </html>

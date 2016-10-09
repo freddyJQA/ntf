@@ -1,0 +1,93 @@
+body {
+	margin-bottom: 30px;
+	font-family: 'Roboto', sans-serif;
+}
+
+a:hover,
+a:active {
+	text-decoration: none;
+}
+
+.demo-ntf {
+	padding: 20px 0px 10px;
+}
+.demo-ntf blockquote {
+	margin-bottom: 12px;
+	padding: 3px 10px;
+}
+.demo-ntf .title p {
+	font-size: 16px;
+	font-weight: 500;
+	color: #000;
+}
+.demo-ntf .body > .container-fluid > .row > div {
+	margin-bottom: 12px;
+	padding: 0;
+	border: 1px solid #aaaaaa;
+}
+@media (min-width: 768px) {
+	.demo-ntf .body > .container-fluid > .row > div {
+		border-right: none;
+	}
+	.demo-ntf .body > .container-fluid > .row > div:last-child {
+		border-right: 1px solid #aaaaaa !important;
+	}
+}
+.demo-ntf .body > .container-fluid > .row > div .ver {
+	padding: 10px;
+}
+.demo-ntf .body > .container-fluid > .row > div .ver p {
+	font-size: 12px;
+}
+.demo-ntf .body > .container-fluid > .row > div pre {
+	margin-bottom: 0;
+	border: none;
+	border-radius: 0;
+}
+
+footer {
+	text-align: center;
+}
+footer a {
+	color: #aaaaaa;
+}
+
+/* bootstrap */
+
+@media (min-width: 768px) {
+	.container {
+		max-width: 980px;
+	}
+}
+
+.jumbotron {
+	text-align: center;
+}
+.jumbotron .descripcion {
+	padding-bottom: 14px;
+}
+.jumbotron .descripcion span {
+	font-size: 24px;
+	font-weight: 300;
+	color: #858585;
+}
+.jumbotron .btn-lg {
+	padding: 16px 44px;
+	font-size: 24px;
+	font-weight: 300;
+}
+
+.label-default,
+.label-ntf-demo {
+	font-size: 12px;
+}
+.label-ntf-demo {
+	background-color: transparent;
+	color: #000000;
+	font-weight: 300;
+	border: 1px solid #777777;
+}
+
+.table {
+	margin-bottom: 10px;
+}
