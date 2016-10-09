@@ -34,3 +34,7 @@ $.ntf ({ text: '¡Esto es una notificación!', color: 'blue' });
 ```
 
 ¡Y listo! Aplicando esos pasos, podrás tener estas notificaciones en tu proyecto.
+
+## Documentación y Ejemplos
+
+Puedes ver toda la documentación y algunos ejemplos en: https://freddyjqa.github.io/ntf/demo/
