@@ -1,4 +1,4 @@
-# ntf -- Plugin de notificaciones con Jquery
+# ntf -- Plugin Jquery para implementar notificaciones
 
 ## Acerca de
 
