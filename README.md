@@ -17,7 +17,7 @@ de una forma rápida y sencilla.
 Primero, debes incluir jquery en tu archivo html
 
 ```
-<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.js"></script>
+<script type="text/javascript" src="/jquery/jquery-3.1.1.js"></script>
 ```
 
 Luego, incluye los archivos .js y .css respectivos del plugin
